@@ -1,0 +1,28 @@
+.stops-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 30rem;
+  }
+  
+  .stop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .stop-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .station-name {
+    font-weight: bold;
+    font-size: 1em;
+    padding-right: 20px;
+  }
+  
+  .station-times {
+    font-size: 0.8em;
+  }

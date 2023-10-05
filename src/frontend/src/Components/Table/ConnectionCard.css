@@ -1,0 +1,65 @@
+.connectionCard {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s, height 0.2s;
+  color: #000;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  align-items: baseline;
+  gap: 1rem; */
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  align-items: baseline;
+  gap: 1rem;
+  align-items: baseline;
+}
+.connectionCard:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+.connectionItem {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.traintype {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 5rem;
+}
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Add any additional styles for the arrow container if needed */
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #000;
+  transition: transform 0.2s;
+}
+.arrow-up {
+  transform: rotate(180deg);
+}
+.additionalInfo {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 5rem;
+}
+.expanded {
+  height: auto;
+  width: 100%;
+}

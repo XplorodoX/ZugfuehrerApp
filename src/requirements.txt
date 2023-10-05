@@ -1,0 +1,5 @@
+flask
+redis
+flasgger
+wiremock
+psycopg2-binary

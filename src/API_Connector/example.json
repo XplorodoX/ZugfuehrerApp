@@ -1,0 +1,143 @@
+{
+   "timetable":{
+      "@station":"Aalen Hbf",
+      "s":[
+         {
+            "@id":"3150113494213757746-2304132152-9",
+            "tl":{
+               "@t":"p",
+               "@o":"GAMEX",
+               "@c":"MEX",
+               "@n":"19490"
+            },
+            "ar":{
+               "@pt":"2304132228",
+               "@pp":"1",
+               "@l":"13",
+               "@ppth":"Crailsheim|Jagstzell|Ellwangen|Schrezheim|Schwabsberg|Goldsh\u00f6fe|Hofen(b Aalen)|Wasseralfingen"
+            },
+            "dp": {
+               "@pt": "2304132237",
+               "@pp": "1",
+               "@l": "13",
+               "@ppth": "M\u00f6gglingen(Gm\u00fcnd)|B\u00f6bingen(Rems)|Schw\u00e4bisch Gm\u00fcnd|Lorch(W\u00fcrtt)|Waldhausen(b Schorndorf)|Pl\u00fcderhausen|Urbach(b Schorndorf)|Schorndorf"
+            }
+         },
+         {
+            "@id":"1743421696860956826-2304132207-1",
+            "tl":{
+               "@t":"p",
+               "@o":"GAMEX",
+               "@c":"MEX",
+               "@n":"19442"
+            },
+            "dp":{
+               "@pt":"2304132207",
+               "@pp":"3",
+               "@l":"13",
+               "@ppth":"M\u00f6gglingen(Gm\u00fcnd)|B\u00f6bingen(Rems)|Schw\u00e4bisch Gm\u00fcnd|Lorch(W\u00fcrtt)|Waldhausen(b Schorndorf)|Pl\u00fcderhausen|Urbach(b Schorndorf)|Schorndorf"
+            }
+         },
+         {
+            "@id":"-4222709987665644383-2304132105-16",
+            "tl":{
+               "@f":"N",
+               "@t":"p",
+               "@o":"GYRB",
+               "@c":"RB",
+               "@n":"57178"
+            },
+            "ar":{
+               "@pt":"2304132225",
+               "@pp":"5",
+               "@l":"89",
+               "@ppth":"Donauw\u00f6rth|W\u00f6rnitzstein|Ebermergen|Harburg(Schwab)|Hoppingen|M\u00f6ttingen|N\u00f6rdlingen|Pflaumloch|Trochtelfingen(b Bopfingen)|Bopfingen|Aufhausen(W\u00fcrtt)|Lauchheim|Westhausen|Goldsh\u00f6fe|Wasseralfingen"
+            }
+         },
+         {
+            "@id":"2829616468115961030-2304132234-1",
+            "tl":{
+               "@f":"D",
+               "@t":"p",
+               "@o":"S6",
+               "@c":"SWE",
+               "@n":"26581"
+            },
+            "dp":{
+               "@pt":"2304132234",
+               "@pp":"3",
+               "@l":"RS51",
+               "@ppth":"Unterkochen|Oberkochen|K\u00f6nigsbronn|Heidenheim-Schnaitheim|Heidenheim|Herbrechtingen|Giengen(Brenz)|Hermaringen|Bergenweiler|Sontheim-Brenz|Niederstotzingen|Langenau(W\u00fcrtt)|Unterelchingen|Oberelchingen|Thalfingen(b Ulm)|Ulm Hbf"
+            }
+         },
+         {
+            "@id":"-3067449366617137652-2304132144-9",
+            "tl":{
+               "@t":"p",
+               "@o":"GAMEX",
+               "@c":"MEX",
+               "@n":"19485"
+            },
+            "ar":{
+               "@pt":"2304132220",
+               "@pp":"2",
+               "@l":"13",
+               "@ppth":"Schorndorf|Urbach(b Schorndorf)|Pl\u00fcderhausen|Waldhausen(b Schorndorf)|Lorch(W\u00fcrtt)|Schw\u00e4bisch Gm\u00fcnd|B\u00f6bingen(Rems)|M\u00f6gglingen(Gm\u00fcnd)"
+            },
+            "dp":{
+               "@pt":"2304132228",
+               "@pp":"2",
+               "@l":"13",
+               "@ppth":"Wasseralfingen|Hofen(b Aalen)|Goldsh\u00f6fe|Schwabsberg|Schrezheim|Ellwangen"
+            }
+         },
+         {
+            "@id":"-8482346270127639474-2304132233-1",
+            "tl":{
+               "@f":"N",
+               "@t":"p",
+               "@o":"GYRB",
+               "@c":"RB",
+               "@n":"94469"
+            },
+            "dp":{
+               "@pt":"2304132233",
+               "@pp":"5",
+               "@l":"89",
+               "@ppth":"Wasseralfingen|Goldsh\u00f6fe|Westhausen|Lauchheim|Aufhausen(W\u00fcrtt)|Bopfingen|Trochtelfingen(b Bopfingen)|Pflaumloch|N\u00f6rdlingen"
+            }
+         },
+         {
+            "@id":"4926037448312729781-2304132214-9",
+            "tl":{
+               "@t":"p",
+               "@o":"GAMEX",
+               "@c":"MEX",
+               "@n":"19437"
+            },
+            "ar":{
+               "@pt":"2304132250",
+               "@pp":"3",
+               "@l":"13",
+               "@ppth":"Schorndorf|Urbach(b Schorndorf)|Pl\u00fcderhausen|Waldhausen(b Schorndorf)|Lorch(W\u00fcrtt)|Schw\u00e4bisch Gm\u00fcnd|B\u00f6bingen(Rems)|M\u00f6gglingen(Gm\u00fcnd)"
+            }
+         },
+         {
+            "@id":"-8340564079423793914-2304132111-15",
+            "tl":{
+               "@f":"D",
+               "@t":"p",
+               "@o":"S6",
+               "@c":"SWE",
+               "@n":"26576"
+            },
+            "ar":{
+               "@pt":"2304132224",
+               "@pp":"3",
+               "@l":"RS5",
+               "@ppth":"Ulm Hbf|Thalfingen(b Ulm)|Langenau(W\u00fcrtt)|Niederstotzingen|Sontheim-Brenz|Bergenweiler|Hermaringen|Giengen(Brenz)|Herbrechtingen|Heidenheim|Heidenheim-Schnaitheim|K\u00f6nigsbronn|Oberkochen|Unterkochen"
+            }
+         }
+      ]
+   }
+}

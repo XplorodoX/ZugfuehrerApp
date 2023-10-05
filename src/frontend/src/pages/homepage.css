@@ -1,0 +1,220 @@
+.homepage {
+    /* Add styles for the homepage container */
+    display: grid;
+    grid-template-rows: 100vh 100vh;
+    font-family: 'Arial', sans-serif; /* Replace with font from figma */
+    background-color: #DDD7C5;
+  }
+  
+.section-1 {
+    position: relative;
+    height: 100vh;
+    background-image: url(background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+.section-1 h1 {
+    position: absolute;
+    top: 2.8rem; /* Adjust this value to change the distance from the top */
+    font-size: 7rem;
+    font-weight: bold;
+  }
+  
+.section-1 .buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+.save-text {
+    color: #FF6A3D;
+  }
+  
+.money-text {
+    color: #FFFFFF;
+  }
+  
+
+  
+.custom-button {
+    background-color: rgba(221, 215, 197, 0.8); /* Semi-transparent background with #DDD7C5 color */
+    color: #2C2C2C; /* Text color: dark grey */
+    border: none;
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer;
+    padding: 1.5rem 2.5rem;
+    transition: all 0.3s ease; /* Optional: Smooth transition effect for hover */
+    font-family: 'Outfit';
+    font-size: 2.5rem;
+    
+  }
+  
+.custom-button:hover {
+    /* Optional: Add styles for hover effect */
+    background-color: rgba(221, 215, 197, 1); /* Remove the background opacity */
+    font-size: 3rem;
+  }
+  
+.bouncing-arrow {
+    position: absolute;
+    bottom: 2rem; /* Adjust this value to change the distance from the bottom */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    animation: bounce 1.5s infinite; /* Bounce animation */
+  }
+  
+.bouncing-arrow::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    background-color: #FF6A3D; /* Tail color, replace with your desired color */
+    left: 50%;
+    margin-left: -5px; /* Half the width of tail */
+    bottom: 10px;
+  }
+
+.bouncing-arrow::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid #FF6A3D; /* Arrowhead color, replace with your desired color */
+    left: 50%;
+    margin-left: -20px;
+  }
+
+.spacer {
+    height: 42%;
+}
+  
+  /* Keyframes for bounce animation */
+  @keyframes bounce {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      transform: translateY(0);
+    }
+    10% {
+      transform: translateY(-10px);
+    }
+    30% {
+      transform: translateY(-6px);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+    70% {
+      transform: translateY(-1px);
+    }
+  }
+
+
+  /* Mobile screens */
+@media screen and (max-width: 600px) {
+    /* Adjust the font size of the heading for mobile screens */
+  .section-1 h1 {
+      top: 2rem;
+      font-size: 1.5rem;
+  }
+
+  /* Decrease button font size and padding for mobile screens */
+  .custom-button {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+  }
+
+  .section-2 h2 {
+      font-size: 1.5rem;
+  }
+    
+  .section-2 p {
+      font-size: 0.9rem;
+  }
+
+  .buttons-container {
+      flex-direction: column; /* Stack buttons vertically on small screens */
+      gap: 0.5rem; /* Reduce the gap between buttons */
+  }
+
+  .custom-button {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+  }
+
+  .bouncing-arrow {
+      bottom: 1rem; /* Adjust distance from the bottom for mobile screens */
+    }
+
+  .spacer {
+        height: 40%; /* Adjust this value for the desired height on tablet screens */
+    }
+
+  /* Any other mobile-specific adjustments you need */
+}
+
+/* Tablet screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .spacer {
+        height: 40%; /* Adjust this value for the desired height on tablet screens */
+    }
+}
+
+/* About us page */
+.section-2 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.section-2 h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.section-2 h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-2 p {
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.jumbotron-container {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.bottom-text {
+  padding-bottom: 0rem;
+}
+
+.info-card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 17rem;
+}
+
+.info-card h2 {
+  font-size: 24px;
+}
+
+.info-card p {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}

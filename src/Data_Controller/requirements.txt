@@ -1,0 +1,7 @@
+flask
+redis
+psycopg2-binary
+flasgger
+wiremock
+flask-restful-swagger
+flask_restx

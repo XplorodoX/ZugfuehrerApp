@@ -1,0 +1,45 @@
+body {
+    background-color: #0c1a23; /* #142935  #1A3C4A */
+    background-color: #DDD7C5;
+    color: #000;
+}
+
+h1 {
+    color: #000;
+    text-align: left;
+}
+
+label {
+    color: #081D35;
+    display: block;
+}
+
+input  {
+    background-color: #FFF;
+    color: #000;
+    border: 1px solid #081D35;
+    margin-top: 0rem;
+}
+
+button {
+    /* background-color: #081D35; */
+    color: #000;
+    border: 1px solid #081D35;
+    padding: 8px 16px;
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer;
+    /* padding: 1.5rem 2.5rem; */
+    transition: all 0.3s ease; /* Optional: Smooth transition effect for hover */
+    font-family: 'Outfit';
+    /* font-size: 2rem; */
+    /* margin-right: 5.5rem; */
+}
+
+.results {
+    color: #FFF;
+}
+
+.formContainer {
+    display: flex;
+    gap: 1rem;
+}

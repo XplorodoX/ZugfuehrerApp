@@ -1,0 +1,8 @@
+Flask==2.0.1
+matplotlib==3.4.3
+selenium==4.9.0
+sqlalchemy
+psycopg2
+schedule
+pandas
+flask_restx

@@ -1,0 +1,6 @@
+Flask==2.0.1
+sqlalchemy
+psycopg2
+pandas
+matplotlib
+flask_restx

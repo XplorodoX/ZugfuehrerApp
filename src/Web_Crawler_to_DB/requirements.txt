@@ -1,0 +1,6 @@
+Flask==2.0.1
+selenium==4.9.0
+sqlalchemy
+psycopg2
+apscheduler
+pandas

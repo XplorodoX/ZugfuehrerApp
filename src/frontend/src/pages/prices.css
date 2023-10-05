@@ -1,0 +1,83 @@
+.results {
+    color: #000;
+}
+
+.result_image {
+    max-width: 1000px;
+    max-height: 1000px;
+}
+
+.wish-price-result {
+    float: left;
+}
+
+.submitButton {
+    /* background-color: #081D35; */
+    color: #000;
+    border: 1px solid #081D35;
+    padding: 8px 16px;
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer;
+    /* padding: 1.5rem 2.5rem; */
+    transition: all 0.3s ease; /* Optional: Smooth transition effect for hover */
+    font-family: 'Outfit';
+    /* font-size: 2rem; */
+    /* margin-right: 5.5rem; */
+}
+
+.formContainer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 0 15px;
+    /* width: 200px; */
+}
+
+.inputContainer input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .results {
+        color: #000;
+    }
+
+    .result_image {
+        max-width: 90%;
+        max-height: auto;
+    }
+
+    .wish-price-result {
+        float: none;
+        text-align: center;
+    }
+
+    .submitButton {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .formContainer {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .inputContainer {
+        padding: 0 10px;
+    }
+
+    .inputContainer input {
+        font-size: 14px;
+    }
+}

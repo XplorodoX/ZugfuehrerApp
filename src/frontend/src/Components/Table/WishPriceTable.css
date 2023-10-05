@@ -1,0 +1,27 @@
+th {
+    padding: 10px;
+}
+
+td:nth-child(1) {
+    padding-right: 100px;
+ }
+
+td {
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    th {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    td {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    td:nth-child(1) {
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,11 @@
+flask
+numpy
+requests
+pandas
+sqlalchemy
+schedule
+sqlalchemy_utils
+psycopg2
+flask_cors
+
+flask_restx
