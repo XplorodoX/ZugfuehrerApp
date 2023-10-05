@@ -1,0 +1,163 @@
+# Autor: Florian Merlau, Marc Nebel, Max Müller, Marius Mühlacker
+
+version: "3.9"
+
+name: train_web_app
+
+services:
+  react:
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    ports:
+      - "80:3000"
+    volumes:
+      - ./frontend:/user/src/app
+      - /user/src/app/node_modules
+    depends_on:
+      - flask
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.10
+
+  flask:
+    build:
+      context: ./webserver
+      dockerfile: ./Dockerfile
+    ports:
+      - "5003:5003"
+    volumes:
+      - ./webserver:/root/src
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.2
+
+  api_connector:
+    build:
+      context: ./API_Connector
+      dockerfile: ./Dockerfile
+    depends_on:
+      - data_controller
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.3
+
+  data_analyzer:
+    build:
+      context: ./Data_Analyzer
+      dockerfile: ./Dockerfile
+    ports:
+      - "5005:5005"
+    depends_on:
+      - data_analyzer_db
+      - data_controller
+      - api_connector
+    volumes:
+      - ./Data_Analyzer:/root/test
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.4
+
+  data_controller:
+    build:
+      context: ./Data_Controller
+      dockerfile: ./Dockerfile
+    ports:
+      - "5001:5001"
+    depends_on:
+      - api_db
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.6
+
+  web_crawler:
+    build:
+      context: ./Web_Crawler
+      #when building
+      shm_size: 1gb
+      dockerfile: ./Dockerfile
+    #when running
+    shm_size: 1gb
+
+    ports:
+      - "5002:5002"
+    depends_on:
+      - web_crawler_db
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.9
+
+  web_crawler_to_db:
+    build:
+      context: ../Web_Crawler_to_DB
+      #when building
+      shm_size: 1gb
+      dockerfile: ../Web_Crawler_to_DB/Dockerfile
+    #when running
+    shm_size: 1gb
+
+    ports:
+      - "5004:5004"
+    depends_on:
+      - web_crawler_db
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.12
+
+  web_crawler_analysis:
+    build:
+      context: ./Web_Crawler_analysis
+      dockerfile: ./Dockerfile
+    ports:
+      - "5011:5011"
+    depends_on:
+      - web_crawler_db
+      - web_crawler
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.13
+
+  ##############################################
+  # Datenbanken Serivces
+
+  data_analyzer_db:
+    container_name: data_analyzer_db
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-p_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secretpwlel2341}
+      PGDATA: /data/p_data
+    #volumes:
+    #   - p_volume:/data/p_data
+    ports:
+      - "5433:5432"
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.8
+    restart: unless-stopped
+
+  api_db:
+    build:
+      context: ./PostgresDB
+      dockerfile: ./Dockerfile
+    ports:
+      - "5432:5432"
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.5
+
+  web_crawler_db:
+    build:
+      context: ./Web_Crawler_DB
+      dockerfile: ./Dockerfile
+    ports:
+      - "5435:5435"
+    networks:
+      my-network:
+        ipv4_address: 192.168.0.11
+
+networks:
+  my-network:
+    ipam:
+      config:
+        - subnet: 192.168.0.0/20
